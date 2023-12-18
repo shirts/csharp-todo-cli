@@ -1,11 +1,14 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
+using System.IO;
+
 public class Program {
     public static void Main(string[] args)
     {
         string action = (args.Length == 0) ? "" : args[0];
 
-        switch(action) 
+        var todoList = new TodoList();
+
+        switch(action)
         {
             case "add":
                 string text = String.Join(" ", args[1..]);
